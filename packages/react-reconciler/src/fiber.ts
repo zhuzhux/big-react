@@ -31,6 +31,7 @@ export class FiberNode {
 		// FunctionComponent ()=>{}
 		this.type = null;
 
+		// 构成树状结构
 		// 指向父fiberNode
 		this.return = null;
 		this.sibling = null;
@@ -51,14 +52,17 @@ export class FiberNode {
 	}
 }
 
+/**
+ * fiber的根节点
+ */
 export class FiberRootNode {
 	container: Container;
 	current: FiberNode;
 	finishedWork: FiberNode | null;
-	constructor(container: Container, hostRooFiber: FiberNode) {
+	constructor(container: Container, hostRootFiber: FiberNode) {
 		this.container = container;
-		this.current = hostRooFiber;
-		hostRooFiber.stateNode = this;
+		this.current = hostRootFiber;
+		hostRootFiber.stateNode = this;
 		this.finishedWork = null;
 	}
 }

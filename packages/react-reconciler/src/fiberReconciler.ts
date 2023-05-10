@@ -10,12 +10,13 @@ import {
 import { HostRoot } from './workTags';
 import { scheduleUpdateOnFiber } from './workLoop';
 
-export function crateContainer(container: Container) {
+export function createContainer(container: Container) {
 	const hostRootFiber = new FiberNode(HostRoot, {}, null);
 	const root = new FiberRootNode(container, hostRootFiber);
 	hostRootFiber.updateQueue = createUpdateQueue();
 	return root;
 }
+
 export function updateContainer(
 	element: ReactElementType | null,
 	root: FiberRootNode
