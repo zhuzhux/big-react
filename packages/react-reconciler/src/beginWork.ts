@@ -20,6 +20,7 @@ export const beginWork = (wip: FiberNode) => {
 			}
 			break;
 	}
+	return null;
 };
 
 function updateHostRoot(wip: FiberNode) {
@@ -32,6 +33,7 @@ function updateHostRoot(wip: FiberNode) {
 
 	const nextChildren = wip.memoizedState;
 	reconcileChildren(wip, nextChildren);
+	return wip.child;
 }
 function updateHostComponent(wip: FiberNode) {
 	const nextProps = wip.pendingProps;

@@ -44,6 +44,12 @@ function renderRoot(root: FiberRootNode) {
 			workInProgress = null;
 		}
 	} while (true);
+
+	const finisheWork = root.current.alternate;
+	root.finishedWork = finisheWork;
+
+	// wip fiberNode树 树中的flags
+	commitRoot(root);
 }
 
 function workLoop() {
