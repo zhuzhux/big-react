@@ -1,0 +1,14 @@
+{
+	"files": [
+		{
+			"path": "packages/react-reconciler/src/workLoop.ts",
+			"bookmarks": [
+				{
+					"line": 79,
+					"column": 11,
+					"label": "finishedWork 是本次更新的 wip 树,将它附值给 current"
+				}
+			]
+		}
+	]
+}
