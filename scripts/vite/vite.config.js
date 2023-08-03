@@ -8,7 +8,10 @@ import path from 'path';
 export default defineConfig({
 	plugins: [
 		react(),
-		replace({ __DEV__: true, preventAssignment: true })
+		replace({
+			__DEV__: true,
+			preventAssignment: true
+		})
 	],
 	resolve: {
 		alias: [
