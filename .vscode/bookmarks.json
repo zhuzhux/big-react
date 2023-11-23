@@ -9,6 +9,71 @@
 					"label": "finishedWork 是本次更新的 wip 树,将它附值给 current"
 				}
 			]
+		},
+		{
+			"path": "packages/react/src/jsx.ts",
+			"bookmarks": [
+				{
+					"line": 56,
+					"column": 45,
+					"label": "通过使用 {} 和 call，可以确保调用的是原生的 hasOwnProperty 方法，而不是config对象本身可能具有的同名属性。"
+				},
+				{
+					"line": 57,
+					"column": 11,
+					"label": "判断config上有没有prop属性,如果有就赋值给props,意思同config.hasOwnProperty(prop)"
+				},
+				{
+					"line": 65,
+					"column": 36,
+					"label": "单独的child,类型是reactElement"
+				},
+				{
+					"line": 67,
+					"column": 33,
+					"label": "数组类型,里面有多个reactElement child"
+				},
+				{
+					"line": 70,
+					"column": 10,
+					"label": "返回一个新的reactElement"
+				}
+			]
+		},
+		{
+			"path": "packages/shared/ReactSymbols.ts",
+			"bookmarks": [
+				{
+					"line": 2,
+					"column": 47,
+					"label": "判断当前的宿主环境是否支持symbol"
+				},
+				{
+					"line": 3,
+					"column": 30,
+					"label": "支持: 通过symbol创建一个独一无二的值"
+				},
+				{
+					"line": 4,
+					"column": 10,
+					"label": "不支持: 通过数字代替标识"
+				}
+			]
+		},
+		{
+			"path": "scripts/rollup/utils.js",
+			"bookmarks": [
+				{
+					"line": 16,
+					"column": 41,
+					"label": "传入包名,返回包的package.json内容"
+				},
+				{
+					"line": 19,
+					"column": 58,
+					"label": "通过fs将包的package.json读成字符串"
+				}
+			]
 		}
 	]
 }
