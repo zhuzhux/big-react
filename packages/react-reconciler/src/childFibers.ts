@@ -18,7 +18,6 @@ function ChildReconciler(shouldTrackEffects: boolean) {
 			// 当前这个父fiber下没有需要删除的fiber
 			returnFiber.deletions = [childToDelete];
 			returnFiber.flags |= ChildDeletion;
-			console.log('[ returnFiber.flags deletions ]', returnFiber);
 		} else {
 			deletions.push(childToDelete);
 		}
